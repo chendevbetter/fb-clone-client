@@ -1,0 +1,57 @@
+@import '../abstracts/variables';
+
+.create-account {
+  &__input {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    border: none;
+    background: $gray-input;
+    margin: 1em 0 0.25em 0;
+    height: 3em;
+    padding-left: 1em;
+    color: $input-text-color;
+
+    &::placeholder {
+      background: transparent;
+    }
+  }
+
+  &__inputs {
+    &__name {
+      display: flex;
+
+      input {
+        margin-bottom: 0;
+      }
+
+      input:last-child {
+        margin-left: 0.5em;
+      }
+    }
+  }
+
+  &__dropdowns {
+    &--headline {
+      display: flex;
+      position: relative;
+
+      & > a {
+        color: inherit;
+      }
+    }
+    &__container {
+      @include multipleItems-singleRow;
+    }
+  }
+
+  &__radio-btns {
+    &__container {
+      @include multipleItems-singleRow;
+    }
+  }
+
+  &__footer {
+    margin-top: 1em;
+  }
+}

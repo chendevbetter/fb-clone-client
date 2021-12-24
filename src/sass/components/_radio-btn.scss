@@ -1,0 +1,13 @@
+.radio-btn {
+  &__container {
+    @include selectableInput;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4em;
+  }
+
+  &__label {
+    font-size: 1.4rem;
+  }
+}

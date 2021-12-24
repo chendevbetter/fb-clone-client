@@ -1,0 +1,12 @@
+.primary-btn {
+  border: none;
+  padding: 0.5em 3em;
+  color: white;
+  font-size: 1.6rem;
+  cursor: pointer;
+  @include round-borders(small);
+
+  &:hover {
+    background: linear-gradient(#79bc64, #578843);
+  }
+}

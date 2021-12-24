@@ -1,0 +1,86 @@
+@mixin round-borders($size) {
+  @if $size == 'medium' {
+    border-radius: 10px;
+  }
+
+  @if $size == 'small' {
+    border-radius: 6px;
+  }
+}
+
+@mixin top-gap($size) {
+  @if $size == 'tiny' {
+    margin-top: 0.5em;
+  }
+
+  @if $size == 'small' {
+    margin-top: 1em;
+  }
+
+  @if $size == 'medium' {
+    margin-top: 2em;
+  }
+
+  @if $size == 'large' {
+    margin-top: 5em;
+  }
+}
+
+@mixin vertical-gap($size) {
+  @if $size == 'medium' {
+    margin: 2em 0;
+  }
+
+  @if $size == 'small' {
+    margin-top: 1em;
+  }
+}
+
+@mixin dynamic-padding($size) {
+  @if $size == 'medium' {
+    padding: 3em;
+  }
+
+  @if $size == 'small' {
+    padding: 1em;
+  }
+}
+
+@mixin bold-text($level) {
+  @if $level == 'normal' {
+    font-weight: 600;
+  }
+  @if $level == 'extra' {
+    font-weight: 800;
+  }
+}
+
+@mixin max-media($breakpoint) {
+  @media only screen and (max-width: $breakpoint + 'px') {
+    @content;
+  }
+}
+
+@mixin animation($animation-name, $time) {
+  @if $animation-name == 'appear-opacity' {
+    animation: appear-opacity $time;
+  }
+
+  @if $animation-name == 'disappear-opacity' {
+    animation: disappear-opacity $time;
+  }
+}
+
+@mixin selectableInput {
+  background: white;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  width: 100%;
+  padding: 0.75em 0.5em;
+}
+
+@mixin multipleItems-singleRow {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}

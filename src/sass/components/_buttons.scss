@@ -1,0 +1,26 @@
+.btn {
+  border: none;
+  padding: 0.75em 1.5em;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  @include round-borders(medium);
+
+  &__primary {
+    background: $button-blue;
+    width: 100%;
+  }
+
+  &__secondary {
+    background: $button-green;
+    transition: all 0.5s;
+
+    &:hover {
+      background: $green-dark;
+    }
+
+    &:focus {
+      opacity: 0.3;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.card {
+  box-shadow: 2px 1px 5px 1px lightgray;
+  padding: 2em 1em;
+  background: white;
+  position: relative;
+  width: 40em;
+
+  @include max-media(1100) {
+    margin: 0 auto;
+  }
+
+  & > h1 {
+    margin: 0;
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: 0.5em;
+    right: 0.75em;
+    cursor: pointer;
+  }
+}
