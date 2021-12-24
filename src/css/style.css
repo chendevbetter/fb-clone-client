@@ -1,0 +1,295 @@
+html {
+  font-size: 10px !important;
+  font-family: Helvetica, Arial, sans-serif; }
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+@keyframes disappear-opacity {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+
+@keyframes appear-opacity {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+.u__center {
+  margin: 0 auto;
+  display: block; }
+  .u__center-text {
+    text-align: center;
+    display: block; }
+
+.u__top--large {
+  margin-top: 5em; }
+
+.u__top--medium {
+  margin-top: 2em; }
+
+.u__top--small {
+  margin-top: 1em; }
+
+.u__top--tiny {
+  margin-top: 0.5em; }
+
+.u__left--small {
+  margin-left: 1em; }
+
+.u__left--tiny {
+  margin-left: 0.25em; }
+
+.u__vertical-gap--medium {
+  margin: 2em 0; }
+
+.u__vertical-gap--small {
+  margin-top: 1em; }
+
+.u__dynamic-padding--medium {
+  padding: 3em; }
+
+.u__dynamic-padding--small {
+  padding: 1em; }
+
+.u__round-borders--medium {
+  border-radius: 10px; }
+
+.u__bold--normal {
+  font-weight: 600; }
+
+.u__bold--extra {
+  font-weight: 800; }
+
+.u__pointer {
+  cursor: pointer; }
+
+.u__disappear-opacity__short {
+  animation: disappear-opacity 0.4s; }
+
+.u__appear-opacity__short {
+  animation: appear-opacity 0.3s; }
+
+@keyframes wopa1 {
+  from {
+    transform: scale(1); }
+  to {
+    transform: scale(2); } }
+
+.card {
+  box-shadow: 2px 1px 5px 1px lightgray;
+  padding: 2em 1em;
+  background: white;
+  position: relative;
+  width: 40em; }
+  @media only screen and (max-width: 1100px) {
+    .card {
+      margin: 0 auto; } }
+  .card > h1 {
+    margin: 0; }
+  .card__close-btn {
+    position: absolute;
+    top: 0.5em;
+    right: 0.75em;
+    cursor: pointer; }
+
+.btn {
+  border: none;
+  padding: 0.75em 1.5em;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  border-radius: 10px; }
+  .btn__primary {
+    background: #1877f2;
+    width: 100%; }
+  .btn__secondary {
+    background: #9dac9a;
+    transition: all 0.5s; }
+    .btn__secondary:hover {
+      background: #36a420; }
+    .btn__secondary:focus {
+      opacity: 0.3; }
+
+.link__text {
+  color: #1877f2;
+  font-size: 1.4rem;
+  cursor: pointer; }
+
+.modal__container {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(10, 10, 10, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1; }
+
+.tooltip-modal__container {
+  box-shadow: 2px 1px 5px 1px lightgray;
+  padding: 1em 1.5em;
+  background-color: white;
+  position: absolute;
+  bottom: 0.5em;
+  opacity: 1 !important; }
+  .tooltip-modal__container > p {
+    display: inline;
+    font-size: 1.1rem; }
+
+.tooltip-modal__bolded {
+  font-weight: 600;
+  margin-right: 0.25em; }
+
+.tooltip-modal__link {
+  color: blue;
+  margin-left: 0.25em; }
+
+.input {
+  display: inline-block;
+  /*width: 100%;*/
+  display: block; }
+
+.dropdown__container {
+  width: 100%; }
+
+.dropdown__btn {
+  background: white;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  width: 100%;
+  padding: 0.75em 0.5em;
+  font-size: 1.4rem; }
+
+.radio-btn__container {
+  background: white;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  width: 100%;
+  padding: 0.75em 0.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4em; }
+
+.radio-btn__label {
+  font-size: 1.4rem; }
+
+.primary-btn {
+  border: none;
+  padding: 0.5em 3em;
+  color: white;
+  font-size: 1.6rem;
+  cursor: pointer;
+  border-radius: 6px; }
+  .primary-btn:hover {
+    background: linear-gradient(#79bc64, #578843); }
+
+.signup_form__main-container {
+  background-color: #f0f2f5; }
+
+.signup_form__container {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  padding: 15em 2.5em;
+  width: 90%;
+  margin: 0 auto; }
+  @media only screen and (max-width: 950px) {
+    .signup_form__container {
+      display: block;
+      padding: 2em; } }
+
+.signup_form__fb-img {
+  height: 10rem;
+  margin-left: -2.5rem;
+  margin-bottom: -1.5rem; }
+
+.signup_form__headline {
+  font-weight: 500;
+  font-size: 3rem;
+  font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+  line-height: 1.3;
+  margin: 0; }
+  @media only screen and (max-width: 1100px) {
+    .signup_form__headline {
+      font-size: 2.5rem;
+      width: 75%;
+      margin-left: 12.5%; } }
+  .signup_form__headline-container {
+    width: 80%; }
+    @media only screen and (max-width: 1100px) {
+      .signup_form__headline-container {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 2.5em; } }
+
+.signup_form__input {
+  padding: 1em 2em;
+  color: #1d2129;
+  font-size: 1.7rem;
+  border: 1px solid #dddfe2;
+  width: 100%;
+  box-sizing: border-box; }
+  .signup_form__input:focus {
+    outline: 1px solid blue; }
+  .signup_form__input--email {
+    margin-bottom: 0.5em; }
+
+.signup_form__footer--para {
+  font-size: 1.5rem;
+  margin-left: 10%; }
+  @media only screen and (max-width: 1100px) {
+    .signup_form__footer--para {
+      margin-left: 0;
+      text-align: center; } }
+
+.signup_form__close-btn {
+  height: 2.25em;
+  width: 2.25em; }
+
+.create-account__input {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border: none;
+  background: #f5f6f7;
+  margin: 1em 0 0.25em 0;
+  height: 3em;
+  padding-left: 1em;
+  color: #1c1e21; }
+  .create-account__input::placeholder {
+    background: transparent; }
+
+.create-account__inputs__name {
+  display: flex; }
+  .create-account__inputs__name input {
+    margin-bottom: 0; }
+  .create-account__inputs__name input:last-child {
+    margin-left: 0.5em; }
+
+.create-account__dropdowns--headline {
+  display: flex;
+  position: relative; }
+  .create-account__dropdowns--headline > a {
+    color: inherit; }
+
+.create-account__dropdowns__container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; }
+
+.create-account__radio-btns__container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; }
+
+.create-account__footer {
+  margin-top: 1em; }

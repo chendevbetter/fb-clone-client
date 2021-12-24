@@ -1,0 +1,9 @@
+.dropdown {
+  &__container {
+    width: 100%;
+  }
+  &__btn {
+    @include selectableInput;
+    font-size: 1.4rem;
+  }
+}

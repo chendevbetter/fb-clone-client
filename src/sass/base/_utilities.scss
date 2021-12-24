@@ -1,0 +1,84 @@
+.u {
+  &__center {
+    margin: 0 auto;
+    display: block;
+
+    &-text {
+      text-align: center;
+      display: block;
+    }
+  }
+
+  &__top--large {
+    @include top-gap(large);
+  }
+
+  &__top--medium {
+    @include top-gap(medium);
+  }
+
+  &__top--small {
+    @include top-gap(small);
+  }
+
+  &__top--tiny {
+    @include top-gap(tiny);
+  }
+
+  &__left--small {
+    margin-left: 1em;
+  }
+
+  &__left--tiny {
+    margin-left: 0.25em;
+  }
+
+  &__vertical-gap--medium {
+    @include vertical-gap(medium);
+  }
+
+  &__vertical-gap--small {
+    @include vertical-gap(small);
+  }
+
+  &__dynamic-padding--medium {
+    @include dynamic-padding(medium);
+  }
+
+  &__dynamic-padding--small {
+    @include dynamic-padding(small);
+  }
+
+  &__round-borders--medium {
+    @include round-borders(medium);
+  }
+
+  &__bold--normal {
+    @include bold-text(normal);
+  }
+
+  &__bold--extra {
+    @include bold-text(extra);
+  }
+
+  &__pointer {
+    cursor: pointer;
+  }
+
+  &__disappear-opacity__short {
+    @include animation(disappear-opacity, 0.4s);
+  }
+
+  &__appear-opacity__short {
+    @include animation(appear-opacity, 0.3s);
+  }
+}
+
+@keyframes wopa1 {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(2);
+  }
+}
