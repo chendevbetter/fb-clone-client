@@ -13,9 +13,18 @@ export const performSetStateAfterXSeconds = (
   }, timeInSeconds);
 };
 
+export const returnBaseUrl = () => {
+  switch (process.env.NODE_ENV) {
+    case 'development':
+      return `http://localhost:${process.env.REACT_APP_SERVER_PORT}/api/v1`
+    default:
+      return ''
+  }
+}
+
 export const returnHttpClient = () => {
   const config: AxiosRequestConfig = {
-    baseURL: 'http://localhost:5000/api/v1/',
+    baseURL: returnBaseUrl()
   };
   return axios.create(config);
 };

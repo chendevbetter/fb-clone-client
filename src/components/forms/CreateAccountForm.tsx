@@ -122,7 +122,6 @@ const CreateAccountForm = ({ closeModal }: createAccountFormProps) => {
   const handleSignup = async () => {
     const httpClient = returnHttpClient();
     const { firstName, lastName, emailOrNumber, password, gender } = formData;
-    // console.log('gender is', chosenGender);
     const birthdayDate = normalizeDate(
       formData['birthday-day'],
       formData['birthday-month'],
