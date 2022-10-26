@@ -1,6 +1,7 @@
 html {
   font-size: 10px !important;
-  font-family: Helvetica, Arial, sans-serif; }
+  font-family: Helvetica, Arial, sans-serif;
+  background: #f0f2f5; }
 
 *,
 *::after,
@@ -59,7 +60,7 @@ html {
   padding: 1em; }
 
 .u__round-borders--medium {
-  border-radius: 10px; }
+  border-radius: 1em; }
 
 .u__bold--normal {
   font-weight: 600; }
@@ -99,13 +100,53 @@ html {
     right: 0.75em;
     cursor: pointer; }
 
+.card1 {
+  box-shadow: 2px 1px 5px 1px lightgray;
+  padding: 2em 1em;
+  background: white;
+  position: relative;
+  border-radius: .5em; }
+
+.post-card__header {
+  display: flex;
+  align-items: center; }
+
+.post-card__user-details {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5em;
+  column-gap: .5em; }
+
+.post-card__post {
+  padding: 2em; }
+
+.post-card__metadata {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .post-card__metadata--likes {
+    display: flex;
+    align-items: center;
+    column-gap: 1em; }
+
+.story-card {
+  border-radius: 5px;
+  height: 20em;
+  width: 12.5em;
+  display: flex;
+  column-gap: 2.5em; }
+  .story-card__img {
+    height: 100%;
+    width: 100%;
+    border-radius: 15px; }
+
 .btn {
   border: none;
   padding: 0.75em 1.5em;
   color: white;
   font-size: 2rem;
   cursor: pointer;
-  border-radius: 10px; }
+  border-radius: 1em; }
   .btn__primary {
     background: #1877f2;
     width: 100%; }
@@ -189,9 +230,71 @@ html {
   color: white;
   font-size: 1.6rem;
   cursor: pointer;
-  border-radius: 6px; }
+  border-radius: 0.6em; }
   .primary-btn:hover {
     background: linear-gradient(#79bc64, #578843); }
+
+.top-bar__main {
+  height: 6em;
+  background: white;
+  display: flex;
+  align-items: center; }
+
+.top-bar__left {
+  display: flex;
+  align-items: center;
+  margin-left: 1em;
+  column-gap: 1em;
+  width: 33%; }
+  .top-bar__left__search-box {
+    display: flex;
+    align-items: center;
+    background: #f0f2f5;
+    height: 4em;
+    border-radius: 15px 15px 15px 15px; }
+    .top-bar__left__search-box--input {
+      border: none;
+      background: #f0f2f5;
+      height: 2em;
+      border-radius: 15px 15px 15px 15px;
+      padding-left: .5em; }
+      .top-bar__left__search-box--input:focus {
+        outline: none; }
+  .top-bar__left__magnifying-glass {
+    height: 1.5em;
+    padding-left: 1em; }
+
+.top-bar__middle {
+  width: 33%; }
+  .top-bar__middle__icons {
+    height: 3em;
+    cursor: pointer; }
+    .top-bar__middle__icons:not(:first-child) {
+      margin-left: 10em; }
+
+.top-bar__right {
+  display: flex;
+  column-gap: 1.5em;
+  width: 33%;
+  justify-content: flex-end; }
+
+.top-bar__profile-pic {
+  height: 4em;
+  width: 4em;
+  border-radius: 50%;
+  margin-right: 2em; }
+
+.gray-circle {
+  background: #e4e6eb;
+  height: 4em;
+  width: 4em;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .gray-circle__img {
+    width: 2em;
+    height: 2em; }
 
 .signup_form__main-container {
   background-color: #f0f2f5; }
@@ -264,7 +367,7 @@ html {
   margin: 1em 0 0.25em 0;
   height: 3em;
   padding-left: 1em;
-  color: #1c1e21; }
+  color: #f0f2f5; }
   .create-account__input::placeholder {
     background: transparent; }
 
@@ -292,4 +395,54 @@ html {
   width: 100%; }
 
 .create-account__footer {
+  margin-top: 1em; }
+
+.profile__main {
+  margin-top: 2em;
+  display: flex; }
+
+.profile__left {
+  width: 33%; }
+
+.profile__middle {
+  width: 33%; }
+
+.profile__right {
+  width: 33%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); }
+  .profile__right__friends {
+    grid-column-start: 2;
+    grid-column-end: 3; }
+    .profile__right__friends--headline {
+      color: gray;
+      font-size: 1.5em;
+      margin-bottom: .5em; }
+    .profile__right__friends--second-headline {
+      color: gray;
+      font-size: 1.5em;
+      margin-top: 0.5em; }
+    .profile__right__friends--list {
+      display: flex;
+      align-items: center;
+      margin-top: 2em; }
+
+.profile__stories {
+  display: flex; }
+
+.profile__post-input--container {
+  display: flex;
+  align-items: center;
+  margin-top: 1em; }
+
+.profile__post-input--input {
+  background: #f0f2f5;
+  border-radius: 2em;
+  outline: none;
+  border: none;
+  padding: 0 1em;
+  height: 3em;
+  width: 90%; }
+
+.profile__post-card {
   margin-top: 1em; }

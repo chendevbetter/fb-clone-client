@@ -1,0 +1,14 @@
+.gray-circle {
+  background: rgb(228, 230, 235);
+  height: 4em;
+  width: 4em;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__img {
+    width: 2em;
+    height: 2em;
+  }
+}

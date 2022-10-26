@@ -13,7 +13,10 @@
 
 @import 'vendors/icons';
 
-@import 'components/card';
+@import 'components/cards/card';
+@import 'components/cards/card1';
+@import 'components/cards/post-card';
+@import 'components/cards/story-card';
 @import 'components/buttons';
 @import 'components/link';
 @import 'components/modal';
@@ -22,6 +25,9 @@
 @import 'components/dropdown';
 @import 'components/radio-btn';
 @import 'components/primary-btn';
+@import 'components/top-bar';
+@import 'components/gray-circle';
 
 @import 'pages/signup_form';
 @import 'pages/create_account';
+@import 'pages/profile';

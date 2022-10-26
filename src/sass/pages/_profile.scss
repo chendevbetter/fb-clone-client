@@ -1,0 +1,68 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.profile {
+  &__main {
+    margin-top: 2em;
+    display: flex;
+  }
+
+  &__left {
+    width: 33%;
+  }
+
+  &__middle {
+    width: 33%;
+  }
+
+  &__right {
+    width: 33%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    &__friends {
+      grid-column-start: 2;
+      grid-column-end: 3;
+
+      &--headline {
+        color: gray;
+        font-size: 1.5em;
+        margin-bottom: .5em;
+      }
+
+      &--second-headline {
+        color: gray;
+        font-size: 1.5em;
+        @include top-gap(tiny)
+      }
+
+      &--list {
+        display: flex;
+        align-items: center;
+        @include top-gap(medium)
+      }
+    }
+  }
+
+  &__stories {
+    display: flex;
+  }
+
+  &__post-input {
+    &--container {
+      display: flex;
+      align-items: center;
+      @include top-gap(small)
+    }
+
+    &--input {
+      @include gray-input;
+      height: 3em;
+      width: 90%;
+    }
+  }
+
+  &__post-card {
+    @include top-gap(small)
+  }
+}

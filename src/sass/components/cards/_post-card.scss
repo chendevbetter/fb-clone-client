@@ -1,0 +1,27 @@
+@import '../../abstracts/mixins';
+
+.post-card {
+  &__header {
+    @include one-line;
+  }
+
+  &__user-details {
+    @include one-line;
+    @include top-gap(tiny);
+    column-gap: .5em;
+  }
+
+  &__post {
+    padding: 2em;
+  }
+
+  &__metadata {
+    @include one-line;
+    justify-content: space-between;
+
+    &--likes {
+      @include one-line;
+      column-gap: 1em;
+    }
+  }
+}

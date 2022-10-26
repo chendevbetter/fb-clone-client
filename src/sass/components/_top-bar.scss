@@ -1,0 +1,74 @@
+@import "../abstracts/variables";
+
+.top-bar {
+  &__main {
+    height: 6em;
+    background: white;
+    display: flex;
+    align-items: center;
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    margin-left: 1em;
+    column-gap: 1em;
+    width: 33%;
+
+
+    &__search-box {
+      display: flex;
+      align-items: center;
+      background: $background-gray;
+      height: 4em;
+      border-radius: 15px 15px 15px 15px;
+
+      &--input {
+        border: none;
+        background: rgb(240, 242, 245);
+        height: 2em;
+        border-radius: 15px 15px 15px 15px;
+        padding-left: .5em;
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+
+    &__magnifying-glass {
+      height: 1.5em;
+      padding-left: 1em;
+    }
+  }
+
+  &__middle {
+    width: 33%;
+
+    &__icons {
+      height: 3em;
+      cursor: pointer;
+
+      &:not(:first-child) {
+        margin-left: 10em;
+      }
+    }
+
+  }
+
+  &__right {
+    display: flex;
+    column-gap: 1.5em;
+    width: 33%;
+    justify-content: flex-end;
+
+  }
+
+  &__profile-pic {
+    height: 4em;
+    width: 4em;
+    border-radius: 50%;
+    margin-right: 2em;
+  }
+
+}

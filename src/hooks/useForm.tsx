@@ -1,5 +1,5 @@
 import { useState, ChangeEvent } from 'react';
-import { ICreateAccountProps } from '../components/types/interfaces/formsInterfaces';
+import { ICreateAccountProps } from '../types/interfaces/formsInterfaces';
 import { ITEM_IS_INVALID } from '../messages/errors';
 import { FormValidation } from '../utils/validations/FormsValidation';
 import { validationHandler } from './validationHook';
