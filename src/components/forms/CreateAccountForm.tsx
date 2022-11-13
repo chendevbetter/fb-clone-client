@@ -13,7 +13,7 @@ import {
 } from "../../messages/explanations";
 import { ClickoutsideHook } from "../../hooks/eventHooks";
 import {
-  returnHttpClient,
+  returnServerHttpClient,
   performSetStateAfterXSeconds,
 } from "../../utils/async-operations";
 import { replaceCssClass } from "../../utils/cssUtils";
@@ -52,10 +52,10 @@ const getMonths = () => {
 const monthsArr = getMonths();
 
 const CreateAccountForm = ({ closeModal }: createAccountFormProps) => {
-  const [currentMonth, setCurrentMonth] = useState(
+  const [currentMonth] = useState(
     monthsArr[new Date().getMonth()].key
   );
-  const [currentYear, setCurrentYear] = useState<string | number>(
+  const [currentYear] = useState<string | number>(
     new Date().getFullYear()
   );
 
@@ -71,7 +71,6 @@ const CreateAccountForm = ({ closeModal }: createAccountFormProps) => {
         if (op === "open") {
           return setBirthdayTooltipOpen(true);
         } else {
-          console.log("closing");
           replaceCssClass(
             "birthdayTooltip",
             "u__appear-opacity__short",
@@ -120,7 +119,7 @@ const CreateAccountForm = ({ closeModal }: createAccountFormProps) => {
   });
 
   const handleSignup = async () => {
-    const httpClient = returnHttpClient();
+    const httpClient = returnServerHttpClient();
     const { firstName, lastName, emailOrNumber, password, gender } = formData;
     const birthdayDate = normalizeDate(
       formData["birthday-day"],

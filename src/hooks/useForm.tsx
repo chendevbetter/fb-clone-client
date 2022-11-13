@@ -1,8 +1,7 @@
-import { useState, ChangeEvent } from 'react';
-import { ICreateAccountProps } from '../types/interfaces/formsInterfaces';
-import { ITEM_IS_INVALID } from '../messages/errors';
-import { FormValidation } from '../utils/validations/FormsValidation';
-import { validationHandler } from './validationHook';
+import { useState, ChangeEvent } from "react";
+import { ICreateAccountProps } from "../types/interfaces/formsInterfaces";
+import { ITEM_IS_INVALID } from "../messages/errors";
+import { FormValidation } from "../utils/validations/FormsValidation";
 
 const useForm = (props: ICreateAccountProps) => {
   const [formData, setFormData] = useState<ICreateAccountProps>({ ...props });
@@ -10,7 +9,7 @@ const useForm = (props: ICreateAccountProps) => {
   const [error, setError] = useState<ICreateAccountProps>({ ...props });
 
   const handleFormDataChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setFormData(formData => ({
+    setFormData((formData) => ({
       ...formData,
       [e.target.name]: e.target.value,
     }));
@@ -20,14 +19,14 @@ const useForm = (props: ICreateAccountProps) => {
     const isItemEmpty = FormValidation.isElementEmpty(e.target.value);
     console.log(e.target.name, isItemEmpty);
     if (isItemEmpty) {
-      setError(error => ({
+      setError((error) => ({
         ...error,
         [e.target.name]: ITEM_IS_INVALID,
       }));
     } else {
-      setError(error => ({
+      setError((error) => ({
         ...error,
-        [e.target.name]: '',
+        [e.target.name]: "",
       }));
     }
   };
@@ -54,18 +53,18 @@ const useForm = (props: ICreateAccountProps) => {
   //   }
   // };
 
-  const handleEmailOrpassord = (e: ChangeEvent<HTMLInputElement>) => {
-    const item = e.target.value;
-    if (item.split('').includes('@')) {
-      return 'email';
-    } else {
-      return validationHandler(e.target.value, 'phone-number');
-    }
-  };
+  // const handleEmailOrpassword = (e: ChangeEvent<HTMLInputElement>) => {
+  //   const item = e.target.value;
+  //   if (item.split("").includes("@")) {
+  //     return "email";
+  //   } else {
+  //     return validationHandler(e.target.value, "phone-number");
+  //   }
+  // };
 
   const handleDataChangeFromNonInput = (e: ChangeEvent<HTMLSelectElement>) => {
     console.log(e.target.name, e.target.value);
-    setFormData(formData => ({
+    setFormData((formData) => ({
       ...formData,
       [e.target.name]: e.target.value,
     }));

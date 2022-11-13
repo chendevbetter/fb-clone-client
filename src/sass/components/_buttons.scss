@@ -8,7 +8,16 @@
 
   &__primary {
     background: $button-blue;
-    width: 100%;
+    border: none;
+    padding: .5em 1em;
+    border-radius: 5px;
+    color: white;
+    margin: 0 1em;
+    cursor: pointer;
+
+    &:active {
+      transform: scale(.85);
+    }
   }
 
   &__secondary {

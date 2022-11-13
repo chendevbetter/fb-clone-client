@@ -3,7 +3,7 @@
 
 .profile {
   &__main {
-    margin-top: 2em;
+    margin: 2em 0 4em 0;
     display: flex;
   }
 
@@ -62,7 +62,15 @@
     }
   }
 
-  &__post-card {
-    @include top-gap(small)
+  &__post {
+
+    &-card {
+      @include top-gap(small)
+    }
+
+    &--user-img {
+      width: 5em;
+      height: 5em;
+    }
   }
 }

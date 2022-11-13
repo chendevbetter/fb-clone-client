@@ -112,10 +112,22 @@ html {
   align-items: center; }
 
 .post-card__user-details {
-  display: flex;
-  align-items: center;
   margin-top: 0.5em;
   column-gap: .5em; }
+
+.post-card__img {
+  width: 4em;
+  height: 4em;
+  margin-right: 1em;
+  border-radius: 50%; }
+
+.post-card__time-since-publish {
+  margin-top: 0.5em; }
+
+.post-card__name {
+  font-weight: 700;
+  font-size: 1.25em;
+  text-transform: capitalize; }
 
 .post-card__post {
   padding: 2em; }
@@ -128,6 +140,36 @@ html {
     display: flex;
     align-items: center;
     column-gap: 1em; }
+
+.post-card__action {
+  display: flex;
+  align-items: center;
+  margin-top: 2em;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-top-color: lightgray;
+  border-bottom-color: lightgray; }
+  .post-card__action--txt {
+    color: gray;
+    font-size: 1.25em;
+    font-weight: 700; }
+  .post-card__action--like-container, .post-card__action--comment-container, .post-card__action--message-container {
+    display: flex;
+    align-items: center;
+    column-gap: 1em;
+    margin: 1em 0;
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    color: #65676b;
+    padding: .5em 0;
+    cursor: pointer; }
+    .post-card__action--like-container:hover, .post-card__action--comment-container:hover, .post-card__action--message-container:hover {
+      background: lightgray; }
+
+.post-card__like--icon, .post-card__comment--icon, .post-card__message-icon {
+  width: 3em;
+  height: 3em; }
 
 .story-card {
   border-radius: 5px;
@@ -149,7 +191,14 @@ html {
   border-radius: 1em; }
   .btn__primary {
     background: #1877f2;
-    width: 100%; }
+    border: none;
+    padding: .5em 1em;
+    border-radius: 5px;
+    color: white;
+    margin: 0 1em;
+    cursor: pointer; }
+    .btn__primary:active {
+      transform: scale(0.85); }
   .btn__secondary {
     background: #9dac9a;
     transition: all 0.5s; }
@@ -366,8 +415,7 @@ html {
   background: #f5f6f7;
   margin: 1em 0 0.25em 0;
   height: 3em;
-  padding-left: 1em;
-  color: #f0f2f5; }
+  padding-left: 1em; }
   .create-account__input::placeholder {
     background: transparent; }
 
@@ -398,7 +446,7 @@ html {
   margin-top: 1em; }
 
 .profile__main {
-  margin-top: 2em;
+  margin: 2em 0 4em 0;
   display: flex; }
 
 .profile__left {
@@ -446,3 +494,7 @@ html {
 
 .profile__post-card {
   margin-top: 1em; }
+
+.profile__post--user-img {
+  width: 5em;
+  height: 5em; }

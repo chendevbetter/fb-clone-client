@@ -1,6 +1,6 @@
-import axios, { AxiosRequestConfig } from 'axios';
+import axios, { AxiosRequestConfig } from "axios";
 
-import { SetStateAction, Dispatch } from 'react';
+import { SetStateAction, Dispatch } from "react";
 
 export const performSetStateAfterXSeconds = (
   op: Dispatch<SetStateAction<boolean>>,
@@ -15,16 +15,21 @@ export const performSetStateAfterXSeconds = (
 
 export const returnBaseUrl = () => {
   switch (process.env.NODE_ENV) {
-    case 'development':
-      return `http://localhost:${process.env.REACT_APP_SERVER_PORT}/api/v1`
+    case "development":
+      return `http://localhost:${process.env.REACT_APP_SERVER_PORT}/api/v1`;
     default:
-      return ''
+      return "";
   }
-}
+};
 
-export const returnHttpClient = () => {
+export const returnServerHttpClient = () => {
   const config: AxiosRequestConfig = {
-    baseURL: returnBaseUrl()
+    baseURL: returnBaseUrl(),
+    withCredentials: true,
   };
   return axios.create(config);
 };
+
+export const returnHttpClient = async () => {
+  return axios.create({withCredentials: true})
+}
