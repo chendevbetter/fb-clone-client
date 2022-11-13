@@ -3,7 +3,7 @@ import React from "react";
 const Home = () => {
   return (
     <>
-      <h1>Home changed by chen-dev-better</h1>
+      <h1>Changed by chen margalit</h1>
     </>
   );
 };
