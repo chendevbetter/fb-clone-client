@@ -1,10 +1,6 @@
 import {
   inValidAttrMsg,
-  ITEM_DOES_NOT_EXIST,
-  ITEM_IS_INVALID,
-  ITEM_IS_NOT_A_NUMBER,
 } from '../messages/errors';
-import { ITEM_IS_VALID } from '../messages/generalMessages';
 
 export const returnValidNum = (attr: any) => {
   if (typeof attr === 'number') {
@@ -25,7 +21,6 @@ export const convertStringToNum = (attr: string, type = '') => {
 };
 
 export class TypeGuardClass {
-  public item: any;
   public type: any;
 
   static isTypeExpected(item: any, type: any) {
@@ -43,9 +38,4 @@ export class TypeGuardClass {
     }
   }
 
-  // else if (typeof item !== type) {
-  //   return { decision: false, msg: ITEM_IS_NOT_A_NUMBER };
-  // } else {
-  //   return { decision: true, msg: ITEM_IS_VALID };
-  // }
 }

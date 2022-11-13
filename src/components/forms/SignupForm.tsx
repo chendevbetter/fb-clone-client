@@ -1,19 +1,21 @@
-import {ChangeEvent, MouseEvent, useEffect, useState} from "react";
+import { ChangeEvent, MouseEvent, useState } from "react";
 import FbWordImg from "../../static/images/fb-word-img.svg";
 import Modal from "../modal/Modal";
 import CreateAccountForm from "./CreateAccountForm";
-import {returnHttpClient} from "../../utils/async-operations";
-import {  useDispatch } from 'react-redux'
-import {login} from '../../reduxStore/slices/authSlice'
+import { returnServerHttpClient } from "../../utils/async-operations";
+import { useDispatch } from "react-redux";
+import { login } from "../../reduxStore/slices/authSlice";
 import { useNavigate } from "react-router-dom";
-
 
 const SignupForm = () => {
   const [modalOpen, setModalOpen] = useState(false);
-  const [loginFormData, setLoginFormData] = useState({email: '', password: ''})
+  const [loginFormData, setLoginFormData] = useState({
+    email: "",
+    password: "",
+  });
 
-  const dispatch = useDispatch()
-  const navigate = useNavigate()
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const closeModal = () => {
     setModalOpen(false);
@@ -27,27 +29,27 @@ const SignupForm = () => {
   };
 
   const loginUser = async (e: MouseEvent) => {
-    e.preventDefault()
-    const httpClient = returnHttpClient();
-    const authenticationRes = await httpClient.post('auth/login', loginFormData);
-    // @ts-ignore
+    e.preventDefault();
+    const httpClient = returnServerHttpClient();
+    const authenticationRes = await httpClient.post(
+      "auth/login",
+      loginFormData
+    );
     if (authenticationRes.status === 200) {
-      console.log('authenticating', authenticationRes)
-      // @ts-ignore
-      const {userId} = authenticationRes.data
-      dispatch(login(userId))
-      navigate(`/profile/${userId}`);
+      const { id, first_name, last_name } = authenticationRes.data;
+      dispatch(login({ id, first_name, last_name }));
+      navigate(`/profile`);
     } else {
-      console.log('authentication failed')
+      console.log("authentication failed");
     }
-  }
+  };
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setLoginFormData(loginFormData => ({
+    setLoginFormData((loginFormData) => ({
       ...loginFormData,
       [e.target.name]: e.target.value,
     }));
-  }
+  };
 
   return (
     <div className="signup_form__main-container">
@@ -68,7 +70,7 @@ const SignupForm = () => {
               <input
                 className="signup_form__input signup_form__input--email u__round-borders--medium"
                 id="email"
-                name='email'
+                name="email"
                 type="email"
                 placeholder="Email or phone numbrer"
                 value={loginFormData.email}
@@ -77,13 +79,16 @@ const SignupForm = () => {
               <input
                 className="signup_form__input"
                 id="password"
-                name='password'
+                name="password"
                 type="password"
                 placeholder="password"
                 value={loginFormData.password}
                 onChange={handleChange}
               />
-              <button className="btn btn__primary u__top--small u__center" onClick={loginUser}>
+              <button
+                className="btn btn__primary u__top--small u__center"
+                onClick={loginUser}
+              >
                 Login
               </button>
               <a

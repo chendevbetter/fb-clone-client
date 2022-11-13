@@ -6,9 +6,26 @@
   }
 
   &__user-details {
-    @include one-line;
     @include top-gap(tiny);
     column-gap: .5em;
+
+  }
+
+  &__img {
+    width: 4em;
+    height: 4em;
+    margin-right: 1em;
+    border-radius: 50%;
+  }
+
+  &__time-since-publish {
+    @include top-gap(tiny);
+  }
+
+  &__name {
+    font-weight: 700;
+    font-size: 1.25em;
+    text-transform: capitalize;
   }
 
   &__post {
@@ -23,5 +40,43 @@
       @include one-line;
       column-gap: 1em;
     }
+  }
+
+  &__action {
+    display: flex;
+    align-items: center;
+    @include top-gap(medium);
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-top-color: lightgray;
+    border-bottom-color: lightgray;
+
+    &--txt {
+      color: gray;
+      font-size: 1.25em;
+      font-weight: 700;
+    }
+
+    &--like-container, &--comment-container, &--message-container {
+      display: flex;
+      align-items: center;
+      column-gap: 1em;
+      margin: 1em 0;
+      width: 33%;
+      display: flex;
+      justify-content: center;
+      color: rgb(101, 103, 107);
+      padding: .5em 0;
+      cursor: pointer;
+
+      &:hover {
+        background: lightgray;
+      }
+    }
+  }
+
+  &__like--icon, &__comment--icon, &__message-icon {
+    width: 3em;
+    height: 3em;
   }
 }

@@ -14,7 +14,7 @@ const TopBar = () => {
   return (
     <div className="top-bar__main">
       <div className="top-bar__left">
-        <img src={FbLogo} />
+        <img src={FbLogo} alt='fb-logo'/>
         <div className="top-bar__left__search-box">
           <MagnifyingGlassIcon className="top-bar__left__magnifying-glass" />
           <input
@@ -26,23 +26,35 @@ const TopBar = () => {
         </div>
       </div>
       <div className="top-bar__middle">
-        <img src={homeIcon} className="top-bar__middle__icons" />
-        <img src={videoPlayerIcon} className="top-bar__middle__icons" />
-        <img src={marketplace} className="top-bar__middle__icons" />
-        <img src={groupsIcon} className="top-bar__middle__icons" />
-        <img src={gamingIcon} className="top-bar__middle__icons" />
+        <img alt="house" src={homeIcon} className="top-bar__middle__icons" />
+        <img
+          alt="video player"
+          src={videoPlayerIcon}
+          className="top-bar__middle__icons"
+        />
+        <img
+          alt="marketplace"
+          src={marketplace}
+          className="top-bar__middle__icons"
+        />
+        <img alt="groups" src={groupsIcon} className="top-bar__middle__icons" />
+        <img alt="gaming" src={gamingIcon} className="top-bar__middle__icons" />
       </div>
       <div className="top-bar__right">
         <div className="gray-circle">
-          <img src={nineDotsIcon} className="gray-circle__img" />
+          <img alt="9dots" src={nineDotsIcon} className="gray-circle__img" />
         </div>
         <div className="gray-circle">
-          <img src={bellIcon} className="gray-circle__img" />
+          <img alt="bell" src={bellIcon} className="gray-circle__img" />
         </div>
         <div className="gray-circle">
-          <img src={messangerIcon} className="gray-circle__img" />
+          <img
+            alt="gray circle"
+            src={messangerIcon}
+            className="gray-circle__img"
+          />
         </div>
-        <img src={avatarIcon} className="top-bar__profile-pic" />
+        <img alt="avatar" src={avatarIcon} className="top-bar__profile-pic" />
       </div>
     </div>
   );
